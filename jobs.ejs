@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Job Junction</h1>
+
+    <!-- Dropdown for Sector Selection -->
+    <!-- <form action="/" method="get">
+      <select name="sector" onchange="this.form.submit()">
+        <option value="IT">IT</option>
+        <option value="Consulting">Consulting</option>
+        <option value="Finance">Finance</option>
+        <option value="Agriculture">Agriculture</option>
+      </select>
+    </form> -->
+
+    <!-- Job Listings -->
+    <div id="jobs-list">
+      <% for (const job of jobs) { %>
+      <div class="job-listing">
+        <h2><%= job.title %> at <%= job.company %></h2>
+        <p>Location: <%= job.location %></p>
+        <p>Experience: <%= job.experience %></p>
+        <p>Salary: <%= job.salary %></p>
+        <p>Description: <%= job.description %></p>
+        <p>Rating: <%= job.rating %> (from <%= job.reviews %> reviews)</p>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
